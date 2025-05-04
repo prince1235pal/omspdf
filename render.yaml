@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: pdf-toolkit
+    runtime: node
+    buildCommand: npm run build
+    startCommand: cd build && npm install && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production 
